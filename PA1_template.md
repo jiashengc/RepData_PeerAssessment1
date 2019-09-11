@@ -113,7 +113,7 @@ hist(filledActByDay$x, main = "Total number of Steps Each Day", xlab = "Steps")
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 ```r
-# Mean of total number of steps taken per day
+# Mean of total number of steps taken per day (Replaced Values)
 mean(filledActByDay$x)
 ```
 
@@ -122,13 +122,33 @@ mean(filledActByDay$x)
 ```
 
 ```r
-# Median of total number of steps taken per day
+# Mean of total number of steps taken per day (Normal)
+mean(stepsByDay$x)
+```
+
+```
+## [1] 9354.23
+```
+
+```r
+# Median of total number of steps taken per day (Replaced Values)
 median(filledActByDay$x)
 ```
 
 ```
 ## [1] 10766.19
 ```
+
+```r
+# Median of total number of steps taken per day (Normal)
+median(stepsByDay$x)
+```
+
+```
+## [1] 10395
+```
+The values differ. There is a higher mean and median for the replaced values than the original data.
+
 ## Are there differences in activity patterns between weekdays and weekends?
 
 ```r

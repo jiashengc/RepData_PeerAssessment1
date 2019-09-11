@@ -60,13 +60,21 @@ filledAct$steps <- ave(filledAct$steps, filledAct$interval, FUN = function(x) {
 filledActByDay <- aggregate(filledAct$steps, by = list(day = filledAct$newDate), FUN = sum)
 hist(filledActByDay$x, main = "Total number of Steps Each Day", xlab = "Steps")
 
-# Mean of total number of steps taken per day
+# Mean of total number of steps taken per day (Replaced Values)
 mean(filledActByDay$x)
 
-# Median of total number of steps taken per day
+# Mean of total number of steps taken per day (Normal)
+mean(stepsByDay$x)
+
+# Median of total number of steps taken per day (Replaced Values)
 median(filledActByDay$x)
 
+# Median of total number of steps taken per day (Normal)
+median(stepsByDay$x)
+
 ```
+The values differ. There is a higher mean and median for the replaced values than the original data.
+
 ## Are there differences in activity patterns between weekdays and weekends?
 ```{r echo = TRUE}
 filledAct$Day <- weekdays(filledAct$newDate, abbreviate = FALSE)
